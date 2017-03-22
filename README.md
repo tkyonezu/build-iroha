@@ -8,10 +8,16 @@
 git clone https://github.com/hyperledger/iroha.git
 ```
 
+IROHA_HOMEを設定しておきます。
+```
+cd iroha
+export IROHA_HOME=$(pwd)
+```
+
 2. このスクリプトをクローンします。
 
 ```
-cd iroha/docker
+cd docker
 git clone https://github.com/tkyonezu/build-iroha.git
 ```
 

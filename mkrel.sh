@@ -18,4 +18,3 @@ cp ${IROHA_HOME}/config/config.json ${IROHA_RELEASE}/config/config.json
 
 rsync -avr ${IROHA_BUILD}/bin ${IROHA_RELEASE}
 rsync -avr ${IROHA_TINY}/scripts ${IROHA_RELEASE}
-
