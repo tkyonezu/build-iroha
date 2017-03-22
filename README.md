@@ -28,6 +28,12 @@ cp mkrel.sh ../dev
 bash build-iroha.sh
 ```
 
+5. 出来上がったコンテナを実行しましょう。
+
+```
+docker run -d hyperledger/iroha-docker
+```
+
 さぁ、うまくできるかな...
 
 ワクワク！
