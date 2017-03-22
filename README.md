@@ -15,7 +15,14 @@ cd iroha/docker
 git clone https://github.com/tkyonezu/build-iroha.git
 ```
 
-3. スクリプトを実行しちゃいましょう。
+3. 追加スクリプトをコピーします。
+
+```
+cd build-iroha
+cp mkrel.sh ../dev
+```
+
+4. スクリプトを実行しちゃいましょう。
 
 ```
 cd build-iroha.git
