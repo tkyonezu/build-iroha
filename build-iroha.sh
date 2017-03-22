@@ -16,12 +16,12 @@ docker run -i --rm \
   -v ${IROHA_HOME}:/opt/iroha \
   hyperledger/iroha-dev \
   sh <<EOF
-    mkdir -p ${IROHA_BUILD}
-    cd ${IROHA_BUILD}
-    cmake ${IROHA_HOME} -DCMAKE_BUILD_TYPE=Release
+    mkdir -p /opt/iroha/build
+    cd /opt/iroha/build
+    cmake /opt/iroha -DCMAKE_BUILD_TYPE=Release
     make -j 10
 
-    bash ${IROHA_HOME}/docker/dev/mkrel.sh
+    bash /opt/iroha/docker/dev/mkrel.sh
 EOF
 
 # build iroha-docker

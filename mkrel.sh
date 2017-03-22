@@ -1,5 +1,7 @@
 #!/bin/bash
 
+IROHA_HOME=/opt/iroha
+
 IROHA_BUILD=${IROHA_HOME}/build
 IROHA_TINY=${IROHA_HOME}/docker/tiny
 IROHA_RELEASE=${IROHA_TINY}/iroha
