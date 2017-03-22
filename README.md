@@ -25,7 +25,6 @@ cp mkrel.sh ../dev
 4. スクリプトを実行しちゃいましょう。
 
 ```
-cd build-iroha.git
 bash build-iroha.sh
 ```
 
