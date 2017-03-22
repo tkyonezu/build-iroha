@@ -5,9 +5,6 @@ if [ -z ${IROHA_HOME} ]; then
     exit 1
 fi
 
-export IROHA_BUILD=${IROHA_HOME}/build
-export IROHA_TINY=${IROHA_HOME}/docker/tiny
-
 if docker images hyperledger/iroha-dev >/dev/null 2>&1; then
   docker build -t hyperledger/iroha-dev ${IROHA_HOME}/docker/dev
 fi
@@ -25,7 +22,7 @@ docker run -i --rm \
 EOF
 
 # build iroha-docker
-docker build -t hyperledger/iroha-docker ${IROHA_TINY}
+docker build -t hyperledger/iroha-docker ${IROHA_HOME}/docker/tiny
 
 cat << "EOF"
  _______   ______   .__   __.  _______ 
