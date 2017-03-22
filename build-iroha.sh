@@ -1,11 +1,15 @@
 #!/bin/basn
 
+if [ -z ${IROHA_HOME} ]; then
+    echo "[FATAL] Empty variable IROHA_HOME"
+    exit 1
+fi
+
 export PROTOBUF_BUILD=/opt/protobuf
 export GRPC_BUILD=/opt/grpc
 
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
-export IROHA_HOME=/opt/iroha
 export IROHA_BUILD=${IROHA_HOME}/build
 export IROHA_TINY=${IROHA_HOME}/docker/tiny
 export IROHA_RELEASE=${IROHA_TINY}/iroha
