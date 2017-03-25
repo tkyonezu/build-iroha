@@ -40,6 +40,16 @@ bash build-iroha.sh
 docker run -d hyperledger/iroha-docker
 ```
 
+6. 実行時の注意
+
+現在の iroha-docker は CMD で run.sh を実行しているのですが、run.sh で最初に make_sumeragi を実行して config/sumeragi.json を上書きしています。そのため、複数のノードを使用するために config をマウントしても、そこにある sumeragi.json が上書きされてしまいます。つまり、1ノードでしか実行できないじょうたいとなります。
+
+幸い Dockerfile で、ENTRYPOINT ではなく CMD を使用していますので、複数ノードで実行するばあいには、以下のように実行します。
+
+```
+docker run -d --name iroha-docker -v ${IROHA_HOME}/config:/iroha/config hyperledger/iroha-docker /iroha/bin/iroha-main
+```
+
 さぁ、うまくできるかな...
 
 ワクワク！
